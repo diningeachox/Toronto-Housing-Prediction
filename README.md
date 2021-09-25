@@ -10,7 +10,7 @@ A major component of this project was to use relevant geographic data for the co
 
 In order to extract the geographical coordinates from each condo's location, I used the google API called Geocoder. I then compared these coordinates to the district polygons given in the Toronto neighborhood dataset to determine which neighborhood the condo belonged to.
 
-Categorical variables such as balcony type were given one-hot encodings. All real-valued data were normalized with the Yeo-Johnson transform, this resulted in lower errors for the model. 
+Categorical variables such as balcony type were given one-hot encodings. All real-valued data were normalized with the Yeo-Johnson transform, this resulted in lower errors for the model. Square feet were given as a range, I split this data into two variables: **Min Square Feet** and **Max Square Feet**.
 
 ## Independent Variables
 The independent variables (X = (X_1, X_2, ...)) used for the model are:
@@ -18,27 +18,25 @@ The independent variables (X = (X_1, X_2, ...)) used for the model are:
 | ------------- | ------------- |
 | Latitude  | Real-valued  |
 | Longitude  | Real-valued |
-| Latitude  | Real-valued  |
-| Longitude  | Real-valued |
-Floor                 2617 non-null   int64  
- 3   Bedrooms              2617 non-null   float64
- 4   Bathrooms             2617 non-null   float64
- 5   x0_Encl               2617 non-null   float64
- 6   x0_Jlte               2617 non-null   float64
- 7   x0_None               2617 non-null   float64
- 8   x0_Open               2617 non-null   float64
- 9   x0_Terr               2617 non-null   float64
- 10  base_parking          2617 non-null   int64  
- 11  addition_parking      2617 non-null   int64  
- 12  Min square feet       2617 non-null   int64  
- 13  Max square feet       2617 non-null   int64  
- 14  Latitude              2617 non-null   float64
- 15  Longitude             2617 non-null   float64
- 16  city_district         2617 non-null   object 
- 17  district_code         2617 non-null   int64  
- 18  mean_district_income  2617 non-null   int64  
- 19  unemployment_rate     2617 non-null   float64
- 20  pop_density           2617 non-null   int64  
- 21  nearest_station       2617 non-null   float64
+| Bedrooms  | Int-valued (range from 1 to 3)  |
+| Bathrooms  | Int-valued (range from 1 to 3) |
+| Floor  | Int-valued (range from 1 to 40+) |
+| Balcony Enclosed  | Bool-valued |
+| Balcony Open  | Bool-valued |
+| Balcony Terrace  | Bool-valued |
+| Balcony Juliet | Bool-valued |
+| No Balcony  | Bool-valued |
+| Base Parking  | Int valued (range from 0 to 10) |
+| Additional Parking  | Int valued (range from 0 to 10) |
+| Meaning District Income  | Real-valued  |
+| Unemployment Rate  | Real-valued |
+| Population Density | Real-valued  |
+| Nearest Station | Real-valued |
+
 
 ## Methods used to improve predictions
+* Scaling all real-valued variables to [0, 1]
+* Using the Yeo-Johnson transform on all real-valued variables
+* Selecting the 15 best variables with sklearn.SelectKBest
+* Hyperparameter Grid Search 
+* Stacking models
