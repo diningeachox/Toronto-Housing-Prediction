@@ -4,9 +4,12 @@ A machine learning model for predicting Toronto condo prices.
 ## Dataset
 The raw data was scraped from realmaster.ca sold listings over a one month period. Data from 2000+ condos were compiled, forming the dataset.
 The scraping was done with BeautifulSoup. 
+Toronto neighborhood data can be obtained here: https://open.toronto.ca/dataset/neighbourhood-profiles/
+Toronto subway data can be obtained here: https://scruss.com/blog/2005/12/14/toronto-subway-station-gps-locations/ 
+
 
 ## Proprocessing
-A major component of this project was to include relevant **geographic data** for the condos as well as the data about the buildings themselves. For each condo, I used its location to determine what Toronto neighborhood it was in, along with important metrics such as **average income, unemployment rate** and **population density** of said neighborhood. Then I downloaded Toronto subway data from https://scruss.com/blog/2005/12/14/toronto-subway-station-gps-locations/ and used it against each condo to calculate the **distance to the nearest subway station**. 
+A major component of this project was to include relevant **geographic data** for the condos as well as the data about the buildings themselves. For each condo, I used its location to determine what Toronto neighborhood it was in, along with important metrics such as **average income, unemployment rate** and **population density** of said neighborhood. Then I used the subway data against each condo to calculate the **distance to the nearest subway station**. 
 
 In order to extract the geographical coordinates from each condo's location, I used the google API called Geocoder. If you want to get geographical coordinates using Geocoder you will have to sign up and get your own API key. You are allowed up to **2500 location queries per day** free of charge.
 
