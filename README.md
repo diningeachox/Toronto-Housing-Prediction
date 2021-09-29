@@ -19,7 +19,7 @@ Categorical variables such as balcony type were given one-hot encodings. All rea
 
 ## Independent Variables
 The independent variables (X = (X_1, X_2, ...)) used for the model are:
-| Feature  | Range |
+| Feature  | Data Type | 
 | ------------- | ------------- |
 | Latitude  | Real-valued  |
 | Longitude  | Real-valued |
@@ -46,7 +46,7 @@ These variables were selected with certain domain knowledge in mind, such as:
 
 ## Visualizations
 Below is a geographical scatterplot of all the locations of the condos, with a color scheme for showing mean average income of the nieghborhood and the prices of the condos.
-![toronto_condos_plot](https://user-images.githubusercontent.com/24876548/135324573-efcb1a1c-f1ae-4388-8da8-ac53942d37c9.png)
+![toronto_condos_plot](https://user-images.githubusercontent.com/24876548/135324573-efcb1a1c-f1ae-4388-8da8-ac53942d37c9.png| width=400)
 
 
 ## Methods used to improve predictions
