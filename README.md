@@ -45,8 +45,7 @@ These variables were selected with certain domain knowledge in mind, such as:
 * High income areas have higher real estate prices
 
 ## Methods used to improve predictions
-* Scaling all real-valued variables to [0, 1]
-* Using the Yeo-Johnson transform on all real-valued variables
+* Using the Yeo-Johnson transform on all real-valued variables to a normal distribution
 * Selecting the 15 best variables with sklearn.SelectKBest
 * Hyperparameter Grid Search 
 * Stacking models
