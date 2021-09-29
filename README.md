@@ -46,7 +46,7 @@ These variables were selected with certain domain knowledge in mind, such as:
 
 ## Visualizations
 Below is a geographical scatterplot of all the locations of the condos, with a color scheme for showing mean average income of the nieghborhood and the prices of the condos.
-<img src="https://user-images.githubusercontent.com/24876548/135324573-efcb1a1c-f1ae-4388-8da8-ac53942d37c9.png" width="600" height="400" )
+<img src="https://user-images.githubusercontent.com/24876548/135324573-efcb1a1c-f1ae-4388-8da8-ac53942d37c9.png" width="600" height="400" />
 
 
 ## Methods used to improve predictions
