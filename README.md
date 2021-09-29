@@ -44,6 +44,11 @@ These variables were selected with certain domain knowledge in mind, such as:
 * Units with balconies are worth more than units without
 * High income areas have higher real estate prices
 
+## Visualizations
+Below is a geographical scatterplot of all the locations of the condos, with a color scheme for showing mean average income of the nieghborhood and the prices of the condos.
+![toronto_condos_plot](https://user-images.githubusercontent.com/24876548/135324573-efcb1a1c-f1ae-4388-8da8-ac53942d37c9.png)
+
+
 ## Methods used to improve predictions
 * Using the Yeo-Johnson transform on all real-valued variables to a normal distribution
 * Selecting the 15 best variables with sklearn.SelectKBest
