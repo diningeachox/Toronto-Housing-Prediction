@@ -58,3 +58,9 @@ Below is a geographical scatterplot of all the locations of the condos, with a c
 
 ## Files
 scraper.py is used to scrape data from realmaster.ca, right now it scrapes listing which are already sold
+price_prediction.ipynb does the rest:
+- consolidate data
+- query geographical coordinates
+- feature selection and engineering
+- train and evaluate models
+- hyperparameter grid search
